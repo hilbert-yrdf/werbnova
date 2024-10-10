@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+nav {
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(0, 217, 255);
+}
+
+.nav__logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.link a {
+    text-decoration: none;
+    color: var(--text-light);
+    transition: 0.3s;
+}
+
+.link a:hover {
+    color: var(--hover-color);
+}
+
+.contenido {
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+}
+
+.mostrador {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.mostrador .fila {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.mostrador .fila .item {
+    max-width: 210px;
+    padding: 30px;
+    height: 250px;
+    border: 2px solid rgb(255, 255, 255);
+    text-align: center;
+    margin:  10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #0000009a;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.mostrador .fila .item:hover {
+    background-color: #00e1ff; 
+    transform: translateY(-5px); 
+}
+
+/* Agrega este estilo para centrar las imágenes */
+.mostrador .fila .item img {
+    width: 120px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+}
+.mostrador .fila .item .descripcion {
+    color: #000000;
+    font-weight: bold;
+}
+
+.mostrador .fila .item .precio {
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .mostrador .fila {
+        flex-direction: column; /* Cambia la dirección de la fila en pantallas pequeñas */
+        align-items: center;
+    }
+    
+    .mostrador .fila .item {
+        margin-bottom: 20px; /* Espacio entre items en móviles */
+        max-width: 90%; /* Ajustar el ancho en móviles */
+    }
+}
